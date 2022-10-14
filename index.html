@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/styles/styles.css">
+    <script src="./assets/scripts/script.js" defer></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    </style>
+    <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon">
+    <title>Jogo da Memória</title>
+</head>
+
+<body>
+    <header>
+        <h1>Jogo da Memória</h1>
+    </header>
+
+    <section class="container-tabuleiro">
+        <div id="tabuleiro"></div>
+    </section>
+
+    <footer>
+        <p>Crédito <a href="https://avatars.githubusercontent.com/u/107952708?v=4" target="_blank">ThiagoNET</a></p>
+        <p>Família Menezes</p>
+    </footer>
+
+    <div id="gameOver">
+        <div>
+            Parabéns, você finalizou o jogo.
+        </div>
+        <button id="restart" onclick="restart()">Jogue Novamente</button>
+    </div>
+
+    <script src="./assets/scripts/game.js"></script>
+</body>
+
+</html>

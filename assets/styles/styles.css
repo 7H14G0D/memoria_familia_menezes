@@ -1,0 +1,211 @@
+* {
+    padding: 0;
+    margin: 0 0 0px 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    font-family: 'Open Sans', cursive;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../assets/images/twd.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+}
+
+/* ===== HEADER ===== */
+header {
+    background-color: rgba(0, 0, 0, 0.575);
+    margin-bottom: 70px;
+    padding: 1px;
+}
+
+h1 {
+    text-align: center;
+    padding: 15px 10px 15px 10px;
+}
+
+/* ===== TABULEIRO ===== */
+.container-tabuleiro {
+    display: flex;
+    justify-content: center;
+}
+
+#tabuleiro {
+    display: grid;
+    grid-template: 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
+    gap: 15px;
+}
+
+.img-twd {
+    width: 95px;
+}
+
+.card {
+    width: 90px;
+    height: 90px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.804);
+}
+
+.card-front {
+    background-color: rgb(158, 0, 164);
+    transform: rotateY(180deg);
+}
+
+.card-back {
+    background-color: rgb(137, 6, 142);
+}
+
+.flip {
+    transform: rotateY(180deg);
+}
+
+.icon {
+    width: 75px;
+}
+
+/* ===== GameOver ===== */
+#gameOver {
+    position: absolute;
+    top: 0px;
+    padding-top: 250px;
+    width: 100%;
+    height: 200%;
+    text-align: center;
+    font-size: 27px;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: none;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#restart {
+    font-family: 'Righteous', cursive;
+    padding: 10px;
+    background-color: rgb(158, 0, 164);
+    border: none;
+    border-radius: 15px;
+    transition: all 0.5s;
+}
+
+#restart:hover,
+#restart:active {
+    background-color: rgb(158, 0, 164);
+    color: white;
+    border: 1px solid white;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: rgba(0, 0, 0, 0.575);
+    padding: 1px;
+    margin-top: 100px;
+    text-align: center;
+}
+
+footer>p {
+    padding: 5px;
+}
+
+.container-github {
+    margin-bottom: 10px;
+}
+
+.container-github>img {
+    width: 35px;
+    background-color: white;
+    padding-bottom: 1px;
+    border-radius: 50%;
+
+}
+
+a {
+    color: rgb(158, 0, 164);
+}
+
+/* ===== MEDIA QUERIES ===== */
+@media screen and (max-width:520px) {
+
+    /* ===== TABULEIRO ===== */
+    .img-twd {
+        width: 75px;
+    }
+
+    .card {
+        width: 80px;
+        height: 80px;
+    }
+
+    .icon {
+        width: 60px;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+
+    /* ===== HEADER ===== */
+    h1 {
+        font-size: 23px;
+    }
+
+    /* ===== GAMEOVER ===== */
+    #gameOver {
+        font-size: 20px;
+    }
+
+    /* ===== TABULEIRO ===== */
+    #tabuleiro {
+        gap: 10px;
+    }
+
+    .img-twd {
+        width: 55px;
+    }
+
+    .card {
+        width: 60px;
+        height: 60px;
+    }
+
+    .icon {
+        width: 50px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+
+    /* ===== TABULEIRO ===== */
+    .img-twd {
+        width: 50px;
+    }
+
+    .card {
+        width: 50px;
+        height: 50px;
+    }
+
+    .icon {
+        width: 40px;
+    }
+
+}
