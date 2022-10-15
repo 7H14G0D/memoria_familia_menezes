@@ -36,7 +36,7 @@ h1 {
 #tabuleiro {
     display: grid;
     grid-template: 1fr 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr 1fr 1fr;
-    gap: 15px;
+    gap: 10px;
 }
 
 .img-twd {
